@@ -1,0 +1,16 @@
+String projectName = "שם הפרוייקט";
+String entrepreneurName = "שם היזם";
+String buyerName = "שם הרוכשים";
+String dealDate = "תאריך עסקה";
+String aptNumberString = "מספר דירה";
+String dealPriceString = "מחיר עסקה (ללא מע\"מ)";
+String lawyersParticipatePriceString = "סכום השתתפות בהוצאות משפטיות (ללא מע\"מ)";
+String dealTitleString = "הוספת עסקה חדשה למערכת";
+String projectTitleString = "הוספת פרויקט חדש למערכת";
+String mishtakenString = "?מחיר למשתכן";
+String addDealString = "הוספת עסקה למערכת";
+String addProjectString = "הוספת פרויקט למערכת";
+String goToProjectsPageString = "עבור לעמוד פרויקטים";
+String goToDealsPageString = "עבור לעמוד עסקאות";
+String successMessage = "פרויקט הוסף בהצלחה";
+String failureMessage = "הוספת פרויקט נכשלה - וודא שכל השדות מלאים";
