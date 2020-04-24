@@ -1,5 +1,6 @@
 import 'package:Nirushka/conts.dart';
 import 'package:Nirushka/firestoreHandler.dart';
+import 'package:Nirushka/loginPage.dart';
 import 'package:Nirushka/project.dart';
 import 'package:Nirushka/projectPage.dart';
 import 'package:Nirushka/utils.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.indigo,
         primarySwatch: Colors.grey,
       ),
-      home: MyHomePage(title: 'Nirushka'),
+      home: LoginPage(),
     );
   }
 }
@@ -218,10 +219,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Text("Download excel"),
                       onPressed: () => {utils.downloadFile(firestoreHandler)},
                     ),
-                    FlatButton(
-                      child: Text("Send mail"),
-                      onPressed: () => {utils.sendMail(firestoreHandler)},
-                    )
                   ],
                 ),
               ),

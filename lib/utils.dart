@@ -86,7 +86,7 @@ class Utils{
     final anchor = html.document.createElement('a') as html.AnchorElement
       ..href = url
       ..style.display = 'none'
-      ..download = 'some_name.csv';
+      ..download = 'all_deals.csv';
     html.document.body.children.add(anchor);
 // download
     anchor.click();
