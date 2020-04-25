@@ -92,7 +92,7 @@ class _ProjectPageState extends State<ProjectPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-            child: Row(
+            child: ListView(children: <Widget>[Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 isLoading
@@ -112,6 +112,7 @@ class _ProjectPageState extends State<ProjectPage> {
                   ),
                 ),
               ],
-            )));
+            )])
+        ));
   }
 }

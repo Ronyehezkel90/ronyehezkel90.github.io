@@ -190,39 +190,42 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-            child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        isLoading
-            ? CircularProgressIndicator()
-            : Container(
-                height: 1000,
-                width: 800,
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(height: 50),
-                    getTitle(dealTitleString),
-                    getTextField(_entrepreneurCtrl, entrepreneurName),
-                    getProjectDropDown(projectName, projectDropdownValue,
-                        projects, onProjectChange),
-                    getDealDatePicker(onDealDateClicked, dealDateValue),
-                    getNumbersField(_aptNumberCtrl, aptNumberString),
-                    getTextField(_buyersCtrl, buyerName),
-                    getNumbersField(_dealPriceCtrl, dealPriceString),
-                    getNumbersField(_lawyersParticipatePriceCtrl,
-                        lawyersParticipatePriceString),
-                    getMishtakenPriceSwitcher(
-                        isMishtakenPrice, onMishtakenPriceChange),
-                    getButton(addDealString, onAddDealClick),
-                    getButton(goToProjectsPageString, onAddProjectClick),
-                    FlatButton(
-                      child: Text("Download excel"),
-                      onPressed: () => {utils.downloadFile(firestoreHandler)},
+            child: ListView(children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  isLoading
+                      ? CircularProgressIndicator()
+                      : Container(
+                    height: 1000,
+                    width: 800,
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(height: 50),
+                        getTitle(dealTitleString),
+                        getTextField(_entrepreneurCtrl, entrepreneurName),
+                        getProjectDropDown(projectName, projectDropdownValue,
+                            projects, onProjectChange),
+                        getDealDatePicker(onDealDateClicked, dealDateValue),
+                        getNumbersField(_aptNumberCtrl, aptNumberString),
+                        getTextField(_buyersCtrl, buyerName),
+                        getNumbersField(_dealPriceCtrl, dealPriceString),
+                        getNumbersField(_lawyersParticipatePriceCtrl,
+                            lawyersParticipatePriceString),
+                        getMishtakenPriceSwitcher(
+                            isMishtakenPrice, onMishtakenPriceChange),
+                        getButton(addDealString, onAddDealClick),
+                        getButton(goToProjectsPageString, onAddProjectClick),
+                        FlatButton(
+                          child: Text("Download excel"),
+                          onPressed: () => {utils.downloadFile(firestoreHandler)},
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-              ),
-      ],
-    )));
+                  ),
+                ],
+              )
+            ],)
+));
   }
 }
